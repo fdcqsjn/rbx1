@@ -53,8 +53,8 @@ class cvBridgeDemo():
         
         # Subscribe to the camera image and depth topics and set
         # the appropriate callbacks
-        self.image_sub = rospy.Subscriber("input_rgb_image", Image, self.image_callback, queue_size=1)
-        self.depth_sub = rospy.Subscriber("input_depth_image", Image, self.depth_callback, queue_size=1)
+        self.image_sub = rospy.Subscriber("/camera/rgb/image_color", Image, self.image_callback, queue_size=1)
+        self.depth_sub = rospy.Subscriber("/camera/depth/image", Image, self.depth_callback, queue_size=1)
         
         rospy.loginfo("Waiting for image topics...")
         rospy.wait_for_message("input_rgb_image", Image)

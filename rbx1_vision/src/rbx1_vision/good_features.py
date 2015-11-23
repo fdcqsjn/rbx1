@@ -38,7 +38,7 @@ class GoodFeatures(ROS2OpenCV2):
         
         # Good features parameters
         self.gf_maxCorners = rospy.get_param("~gf_maxCorners", 200)
-        self.gf_qualityLevel = rospy.get_param("~gf_qualityLevel", 0.02)
+        self.gf_qualityLevel = rospy.get_param("~gf_qualityLevel", 0.1)
         self.gf_minDistance = rospy.get_param("~gf_minDistance", 7)
         self.gf_blockSize = rospy.get_param("~gf_blockSize", 10)
         self.gf_useHarrisDetector = rospy.get_param("~gf_useHarrisDetector", True)

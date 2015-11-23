@@ -17,11 +17,9 @@
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details at:
-    
-    http://www.gnu.org/licenses/gpl.html
-      
-"""
 
+    http://www.gnu.org/licenses/gpl.html
+"""
 import rospy
 from geometry_msgs.msg import Twist, Point, Quaternion
 import tf
@@ -32,7 +30,6 @@ class OutAndBack():
     def __init__(self):
         # Give the node a name
         rospy.init_node('out_and_back', anonymous=False)
-
         # Set rospy to execute a shutdown function when exiting       
         rospy.on_shutdown(self.shutdown)
 
@@ -53,7 +50,7 @@ class OutAndBack():
 
         # Set the rotation speed in radians per second
         angular_speed = 1.0
-        
+       
         # Set the angular tolerance in degrees converted to radians
         angular_tolerance = radians(2.5)
         

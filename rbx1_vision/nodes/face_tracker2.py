@@ -38,7 +38,7 @@ class FaceTracker(FaceDetector, LKTracker):
         self.show_text = rospy.get_param("~show_text", True)
         self.show_add_drop = rospy.get_param("~show_add_drop", False)
         self.feature_size = rospy.get_param("~feature_size", 1)
-        self.use_depth_for_tracking = rospy.get_param("~use_depth_for_tracking", False)
+        self.use_depth_for_tracking = rospy.get_param("~use_depth_for_tracking", True)
         self.min_keypoints = rospy.get_param("~min_keypoints", 20)
         self.abs_min_keypoints = rospy.get_param("~abs_min_keypoints", 6)
         self.std_err_xy = rospy.get_param("~std_err_xy", 2.5) 
